@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"D:\Program Files (x86)\IAR Systems\common\bin\cspybat" -f "E:\学习区\智能车\十三届\国赛\开源程序\project\settings\KV58_ZBT.Debug.general.xcl" --backend -f "E:\学习区\智能车\十三届\国赛\开源程序\project\settings\KV58_ZBT.Debug.driver.xcl" 
+"D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\common\bin\cspybat" -f "F:\KV58_project\KV58_ZBT\IAR\project\settings\KV58_ZBT.Debug.general.xcl" --backend -f "F:\KV58_project\KV58_ZBT\IAR\project\settings\KV58_ZBT.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"D:\Program Files (x86)\IAR Systems\common\bin\cspybat" -f "E:\学习区\智能车\十三届\国赛\开源程序\project\settings\KV58_ZBT.Debug.general.xcl" "--debug_file=%~1" --backend -f "E:\学习区\智能车\十三届\国赛\开源程序\project\settings\KV58_ZBT.Debug.driver.xcl" 
+"D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\common\bin\cspybat" -f "F:\KV58_project\KV58_ZBT\IAR\project\settings\KV58_ZBT.Debug.general.xcl" "--debug_file=%~1" --backend -f "F:\KV58_project\KV58_ZBT\IAR\project\settings\KV58_ZBT.Debug.driver.xcl" 
 
 @echo off 
 :end

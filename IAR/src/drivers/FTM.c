@@ -35,7 +35,7 @@ void FTM_PWM_init(FTM_Type* ftmn,unsigned char ch, u32 freq, u32 duty)
       else if(FTM0_CH0 == PTE24)
         PORT_PCR_REG(PORTE,24)=PORT_PCR_MUX(3);
       else if(FTM0_CH0 == PTD0)
-        PORT_PCR_REG(PORTD,0)=PORT_PCR_MUX(4);
+        PORT_PCR_REG(PORTD,0)=PORT_PCR_MUX(5);
       break;
     case CH1:
       if(FTM0_CH1 == PTC2)
@@ -45,7 +45,7 @@ void FTM_PWM_init(FTM_Type* ftmn,unsigned char ch, u32 freq, u32 duty)
       else if(FTM0_CH1 == PTE25)
         PORT_PCR_REG(PORTE,25)=PORT_PCR_MUX(3);
       else if(FTM0_CH1 == PTD1)
-        PORT_PCR_REG(PORTD,1)=PORT_PCR_MUX(4);
+        PORT_PCR_REG(PORTD,1)=PORT_PCR_MUX(5);
       break;
     case CH2:
       if(FTM0_CH2 == PTC3)
@@ -54,6 +54,8 @@ void FTM_PWM_init(FTM_Type* ftmn,unsigned char ch, u32 freq, u32 duty)
         PORT_PCR_REG(PORTA,5)=PORT_PCR_MUX(3);
       else if(FTM0_CH2 == PTE29)
         PORT_PCR_REG(PORTE,29)=PORT_PCR_MUX(3);
+      else if(FTM0_CH2 == PTC5)
+        PORT_PCR_REG(PORTC,5)=PORT_PCR_MUX(4);
       else if(FTM0_CH2 == PTD2)
         PORT_PCR_REG(PORTD,2)=PORT_PCR_MUX(4);
       break;
@@ -70,36 +72,28 @@ void FTM_PWM_init(FTM_Type* ftmn,unsigned char ch, u32 freq, u32 duty)
     case CH4:
       if(FTM0_CH4 == PTD4)
         PORT_PCR_REG(PORTD,4)=PORT_PCR_MUX(4);
-      else if(FTM0_CH4 == PTA7)
-        PORT_PCR_REG(PORTA,7)=PORT_PCR_MUX(3);
       else if(FTM0_CH4 == PTE26)
         PORT_PCR_REG(PORTE,26)=PORT_PCR_MUX(3);
-      else if(FTM0_CH4 == PTD4)
-        PORT_PCR_REG(PORTD,4)=PORT_PCR_MUX(4);
+      else if(FTM0_CH4 == PTA7)
+        PORT_PCR_REG(PORTA,7)=PORT_PCR_MUX(3);
       break;
     case CH5:
       if(FTM0_CH5 == PTD5)
         PORT_PCR_REG(PORTD,5)=PORT_PCR_MUX(4);
       else if(FTM0_CH5 == PTA0)
         PORT_PCR_REG(PORTA,0)=PORT_PCR_MUX(3);
-      else if(FTM0_CH5 == PTD5)
-        PORT_PCR_REG(PORTD,5)=PORT_PCR_MUX(4);
       break;
     case CH6:
       if(FTM0_CH6 == PTD6)
         PORT_PCR_REG(PORTD,6)=PORT_PCR_MUX(4);
       else if(FTM0_CH6 == PTA1)
         PORT_PCR_REG(PORTA,1)=PORT_PCR_MUX(3);
-      else if(FTM0_CH6 == PTD6)
-        PORT_PCR_REG(PORTD,6)=PORT_PCR_MUX(4);
       break;
     case CH7:
       if(FTM0_CH7 == PTD7)
         PORT_PCR_REG(PORTD,7)=PORT_PCR_MUX(4);
       else if(FTM0_CH7 == PTA2)
         PORT_PCR_REG(PORTA,2)=PORT_PCR_MUX(3);
-      else if(FTM0_CH7 == PTD7)
-        PORT_PCR_REG(PORTD,7)=PORT_PCR_MUX(4);
       break;
     default:
       return;
@@ -186,18 +180,22 @@ void FTM_PWM_init(FTM_Type* ftmn,unsigned char ch, u32 freq, u32 duty)
         PORT_PCR_REG(PORTE,7)=PORT_PCR_MUX(6);
       else if(FTM3_CH2 == PTD2)
         PORT_PCR_REG(PORTD,2)=PORT_PCR_MUX(4);
+      else if(FTM3_CH2 == PTA18)
+        PORT_PCR_REG(PORTA,18)=PORT_PCR_MUX(6);
+      else if(FTM3_CH2 == PTB18)
+        PORT_PCR_REG(PORTB,18)=PORT_PCR_MUX(4);
       break;
     case CH3:
       if(FTM3_CH3 == PTE8)
         PORT_PCR_REG(PORTE,8)=PORT_PCR_MUX(6);
       else if(FTM3_CH3 == PTD3)
         PORT_PCR_REG(PORTD,3)=PORT_PCR_MUX(4);
+      else if(FTM3_CH3 == PTB19)
+        PORT_PCR_REG(PORTB,19)=PORT_PCR_MUX(4);
       break;
     case CH4:
       if(FTM3_CH4 == PTE9)
         PORT_PCR_REG(PORTE,9)=PORT_PCR_MUX(6);
-      else if(FTM3_CH4 == PTD1)
-        PORT_PCR_REG(PORTC,8)=PORT_PCR_MUX(4);
       else if(FTM3_CH4 == PTC8)
         PORT_PCR_REG(PORTC,8)=PORT_PCR_MUX(3);
       break;

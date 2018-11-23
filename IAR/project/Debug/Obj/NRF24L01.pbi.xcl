@@ -1,73 +1,73 @@
-"D:\_58_Cross_New\ZBT_KV58_Noface_2.0\src\drivers\NRF24L01.c"
+"F:\KV58_project\KV58_ZBT\IAR\src\drivers\NRF24L01.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\src\drivers
+F:\KV58_project\KV58_ZBT\IAR\src\drivers
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\project\..\src\app
+F:\KV58_project\KV58_ZBT\IAR\project\..\src\app
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\project\..\src\CMSIS
+F:\KV58_project\KV58_ZBT\IAR\project\..\src\CMSIS
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\project\..\src\Control
+F:\KV58_project\KV58_ZBT\IAR\project\..\src\Control
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\project\..\src\drivers
+F:\KV58_project\KV58_ZBT\IAR\project\..\src\drivers
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\project\..\src\fsl
+F:\KV58_project\KV58_ZBT\IAR\project\..\src\fsl
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\project\..\src\startup
+F:\KV58_project\KV58_ZBT\IAR\project\..\src\startup
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\project\..\src\utilities
+F:\KV58_project\KV58_ZBT\IAR\project\..\src\utilities
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\project\..\src
+F:\KV58_project\KV58_ZBT\IAR\project\..\src
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\project\..\src\ugfx
+F:\KV58_project\KV58_ZBT\IAR\project\..\src\ugfx
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\project\..\src\ugfx\drivers\gdisp\ILI9341
+F:\KV58_project\KV58_ZBT\IAR\project\..\src\ugfx\drivers\gdisp\ILI9341
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\project\..\src\ugfx\src\gdisp
+F:\KV58_project\KV58_ZBT\IAR\project\..\src\ugfx\src\gdisp
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\project\..\src\ugfx\src
+F:\KV58_project\KV58_ZBT\IAR\project\..\src\ugfx\src
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\project\..\src\Control\menu
+F:\KV58_project\KV58_ZBT\IAR\project\..\src\Control\menu
 -I
-C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\CMSIS\Core\Include
+D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\CMSIS\Core\Include
 -I
-C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\CMSIS\DSP\Include
+D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\CMSIS\DSP\Include
 -I
-C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\inc
+D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\inc
 -I
-C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\inc\c
+D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\inc\c
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\src\app
+F:\KV58_project\KV58_ZBT\IAR\src\app
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\src\CMSIS
+F:\KV58_project\KV58_ZBT\IAR\src\CMSIS
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\src\Control
+F:\KV58_project\KV58_ZBT\IAR\src\Control
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\src\drivers
+F:\KV58_project\KV58_ZBT\IAR\src\drivers
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\src\fsl
+F:\KV58_project\KV58_ZBT\IAR\src\fsl
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\src\startup
+F:\KV58_project\KV58_ZBT\IAR\src\startup
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\src\utilities
+F:\KV58_project\KV58_ZBT\IAR\src\utilities
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\src
+F:\KV58_project\KV58_ZBT\IAR\src
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\src\ugfx
+F:\KV58_project\KV58_ZBT\IAR\src\ugfx
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\src\ugfx\drivers\gdisp\ILI9341
+F:\KV58_project\KV58_ZBT\IAR\src\ugfx\drivers\gdisp\ILI9341
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\src\ugfx\src\gdisp
+F:\KV58_project\KV58_ZBT\IAR\src\ugfx\src\gdisp
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\src\ugfx\src
+F:\KV58_project\KV58_ZBT\IAR\src\ugfx\src
 -I
-D:\_58_Cross_New\ZBT_KV58_Noface_2.0\src\Control\menu
+F:\KV58_project\KV58_ZBT\IAR\src\Control\menu
 -I
-C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\CMSIS\Core\Include
+D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\CMSIS\Core\Include
 -I
-C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\CMSIS\DSP\Include
+D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\CMSIS\DSP\Include
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0
@@ -218,8 +218,8 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\CMSIS\DSP\Include
 -D__JMP_BUF_ELEMENT_TYPE__=unsigned long long int
 -D__JMP_BUF_NUM_ELEMENTS__=16
 -D__TID__=0xcf60
--D__VER__=8030001
--D__BUILD_NUMBER__=114
+-D__VER__=8032001
+-D__BUILD_NUMBER__=169
 -D__IAR_SYSTEMS_ICC__=9
 -D_MAX_ALIGNMENT=8
 -D__LITTLE_ENDIAN__=1
@@ -316,8 +316,8 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\CMSIS\DSP\Include
 -D__HAS_JOINED_TYPES__=1
 -D__HAS_LOCATED_DECLARATION__=1
 -D__HAS_LOCATED_WITH_INIT__=1
--D__IAR_COMPILERBASE__=656388
--D__IAR_COMPILERBASE_STR__=10.4.4.1056
+-D__IAR_COMPILERBASE__=656390
+-D__IAR_COMPILERBASE_STR__=10.4.6.1115
 -D__UNICODE_SOURCE_SUPPORTED__=1
 -D__VTABLE_MEM__=
 -D__PRAGMA_REDEFINE_EXTNAME=1
@@ -364,9 +364,9 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\CMSIS\DSP\Include
 -D__EDG_FLOAT128_ENABLING_POSSIBLE=0
 -DCPU_MKV58F1M0VLQ24=1
 -DARM_MATH_CM7=1
--D_DLIB_CONFIG_FILE_HEADER_NAME="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\arm\\inc\\c\\DLib_Config_Full.h"
--D_DLIB_CONFIG_FILE_STRING="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\arm\\inc\\c\\DLib_Config_Full.h"
--D__VERSION__="IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM"
+-D_DLIB_CONFIG_FILE_HEADER_NAME="D:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Config_Full.h"
+-D_DLIB_CONFIG_FILE_STRING="D:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Config_Full.h"
+-D__VERSION__="IAR ANSI C/C++ Compiler V8.32.1.169/W32 for ARM"
 -D__ICCARM_OLD_DEFINED_VAARGS__=1
 -D__VA_STACK_ALIGN__=8
 -D__CODE_MEMORY_LIST1__()=__CODE_MEM_HELPER1__(__code, 0 )

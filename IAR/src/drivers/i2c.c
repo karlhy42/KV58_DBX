@@ -131,6 +131,11 @@ void I2C_Init(I2Cn i2cn)
       PORTA_PCR14 = PORT_PCR_MUX(8);
       PORTA_PCR14 = PORTA_PCR14|(1<<5);
     }
+    else if(I2C1_SCL == PTD8)
+    {
+      PORTD_PCR8 = PORT_PCR_MUX(2);
+      PORTD_PCR8 = PORTD_PCR8|(1<<5);
+    }
     
     if(I2C1_SDA == PTE0)
     { 
@@ -152,6 +157,11 @@ void I2C_Init(I2Cn i2cn)
       PORTA_PCR13 = PORT_PCR_MUX(8);
       PORTA_PCR13 = PORTC_PCR13 | (1<<5);
     } 
+    else if(I2C1_SDA == PTD9)
+    {
+      PORTD_PCR9 = PORT_PCR_MUX(2);
+      PORTD_PCR9 = PORTD_PCR9|(1<<5);
+    }
   }
   
   /* ÉèÖÃÆµÂÊ */

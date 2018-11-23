@@ -37,59 +37,73 @@ uint32 spi_init(SPIn_e spin, SPIn_PCSn_e pcs, SPI_CFG master,uint32 baud)
         SIM_SCGC6 |= SIM_SCGC6_SPI0_MASK;
 
         //进行管脚复用
-        port_init_NRF(SPI0_SCK , ALT2  );
-        port_init_NRF(SPI0_SOUT, ALT2  );
-        port_init_NRF(SPI0_SIN , ALT2  );
+        port_init_NRF(SPI0_SCK , ALT2);
+        port_init_NRF(SPI0_SOUT, ALT2);
+        port_init_NRF(SPI0_SIN , ALT2);
 
         if(pcs & SPIn_PCS0)
-            port_init_NRF(SPI0_PCS0, ALT2  );
+            port_init_NRF(SPI0_PCS0, ALT2);
 
         if(pcs & SPIn_PCS1)
-            port_init_NRF(SPI0_PCS1, ALT2  );
+            port_init_NRF(SPI0_PCS1, ALT2);
 
         if(pcs & SPIn_PCS2)
-            port_init_NRF(SPI0_PCS2, ALT2  );
+            port_init_NRF(SPI0_PCS2, ALT2);
 
         if(pcs & SPIn_PCS3)
-            port_init_NRF(SPI0_PCS3, ALT2  );
+            port_init_NRF(SPI0_PCS3, ALT2);
 
         if(pcs & SPIn_PCS4)
-            port_init_NRF(SPI0_PCS4, ALT2  );
+            port_init_NRF(SPI0_PCS4, ALT2);
 
         if(pcs & SPIn_PCS5)
-            port_init_NRF(SPI0_PCS5, ALT3  );
+            port_init_NRF(SPI0_PCS5, ALT3);
     }
     else if(spin == kSPI1)
     {
     	SIM_SCGC6 |= SIM_SCGC6_SPI1_MASK;
-        port_init_NRF(SPI1_SCK , ALT2  );
-        port_init_NRF(SPI1_SOUT, ALT2  );
-        port_init_NRF(SPI1_SIN , ALT2  );
+        if(SPI1_SCK == PTD5)
+          port_init_NRF(SPI1_SCK , ALT7);
+        else
+          port_init_NRF(SPI1_SCK , ALT2);
+        if(SPI1_SOUT == PTD6)
+          port_init_NRF(SPI1_SOUT , ALT7);
+        else
+          port_init_NRF(SPI1_SOUT, ALT2);
+        if(SPI1_SIN == PTD7)
+          port_init_NRF(SPI1_SIN , ALT7);
+        else
+          port_init_NRF(SPI1_SIN , ALT2);
 
         if(pcs & SPIn_PCS0)
-            port_init_NRF(SPI1_PCS0, ALT2  );
+            port_init_NRF(SPI1_PCS0, ALT2);
 
         if(pcs & SPIn_PCS1)
-            port_init_NRF(SPI1_PCS1, ALT2  );
+            port_init_NRF(SPI1_PCS1, ALT2);
 
         if(pcs & SPIn_PCS2)
-            port_init_NRF(SPI1_PCS2, ALT2  );
+            port_init_NRF(SPI1_PCS2, ALT2);
 
         if(pcs & SPIn_PCS3)
-            port_init_NRF(SPI1_PCS3, ALT2  );
+            port_init_NRF(SPI1_PCS3, ALT2);
     }
     else if(spin == kSPI2)
     {
         SIM_SCGC3 |= SIM_SCGC3_SPI2_MASK;
-        port_init_NRF(SPI2_SCK , ALT2  );
-        port_init_NRF(SPI2_SOUT, ALT2  );
-        port_init_NRF(SPI2_SIN , ALT2  );
+        port_init_NRF(SPI2_SCK , ALT2);
+        port_init_NRF(SPI2_SOUT, ALT2);
+        port_init_NRF(SPI2_SIN , ALT2);
 
         if(pcs & SPIn_PCS0)
-            port_init_NRF(SPI2_PCS0, ALT2  );
+            port_init_NRF(SPI2_PCS0, ALT2);
 
         if(pcs & SPIn_PCS1)
-            port_init_NRF(SPI2_PCS1, ALT2  );
+        {
+          if(SPI2_PCS1 == PTC12)
+            port_init_NRF(SPI2_PCS1, ALT7);
+          else
+            port_init_NRF(SPI2_PCS1, ALT2);
+        }
     }
     else
     {

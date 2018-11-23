@@ -37,7 +37,7 @@ void Uart_Init (UARTn_e uratn, uint32 baud)
         }
         else if(UART0_RX == PTC6)
         {
-             PORTC_PCR6= PORT_PCR_MUX(6);       //使能PTC6引脚第5功能
+             PORTC_PCR6= PORT_PCR_MUX(5);       //使能PTC6引脚第5功能
         }
         else if(UART0_RX == PTD6)
         {
