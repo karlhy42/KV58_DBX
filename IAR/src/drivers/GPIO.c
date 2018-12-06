@@ -16,21 +16,27 @@
 void GPIO_Init (PORT_Type* ptn, u8 n, PORT_CFG cfg,u8 data)
 {
   GPIO_Type* port;
+  ASSERT((n>=0)&&(n<32),"Pin number error");
   switch((u32)ptn)
   {
   case PORTA_BASE:
+    SIM_SCGC5 |= SIM_SCGC5_PORTA_MASK;
     port = GPIOA;
     break;
   case PORTB_BASE:
+    SIM_SCGC5 |= SIM_SCGC5_PORTB_MASK;
     port = GPIOB;
     break;
   case PORTC_BASE:
+    SIM_SCGC5 |= SIM_SCGC5_PORTC_MASK;
     port = GPIOC;
     break;
   case PORTD_BASE:
+    SIM_SCGC5 |= SIM_SCGC5_PORTD_MASK;
     port = GPIOD;
     break;
   case PORTE_BASE:
+    SIM_SCGC5 |= SIM_SCGC5_PORTE_MASK;
     port = GPIOE;
     break;
   default:
@@ -58,6 +64,7 @@ void port_init(PORT_Type* ptn, u8 n, PORT_CFG cfg)
 {
   GPIO_Type * port;
   IRQn_Type IRQn;
+  ASSERT((n>=0)&&(n<32),"Pin number error");
   switch((u32)ptn)
   {
   case PORTA_BASE:
@@ -91,5 +98,6 @@ void port_init(PORT_Type* ptn, u8 n, PORT_CFG cfg)
 
 void port_NOMUX(PORT_Type* ptn, u8 n)
 {
+  ASSERT((n>=0)&&(n<32),"Pin number error");
   PORT_PCR_REG(ptn, n) = PORT_PCR_MUX(1) ;     //去除无效位上的值
 }

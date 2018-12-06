@@ -14,7 +14,8 @@ void FTM_PWM_init(FTM_Type* ftmn,unsigned char ch, u32 freq, u32 duty)
   u16 mod;
   u8 sc_ps;
   u16 cv;
-
+  ASSERT((duty>=0)&&(duty<=FTM_PRECISON),"FTM PWMduty error");
+  ASSERT((freq>0)&&(freq<clk_hz),"FTM PWMfreq error");
   /*       计算频率设置        */
   mod = (clk_hz >> 16 ) / freq ;
   for(sc_ps = 0; (mod >> sc_ps) >= 1; sc_ps++);
@@ -51,7 +52,7 @@ void FTM_PWM_init(FTM_Type* ftmn,unsigned char ch, u32 freq, u32 duty)
       if(FTM0_CH2 == PTC3)
         PORT_PCR_REG(PORTC,3)=PORT_PCR_MUX(4);
       else if(FTM0_CH2 == PTA5)
-        PORT_PCR_REG(PORTA,5)=PORT_PCR_MUX(3);
+        PORT_PCR_REG(PORTA,5)=PORT_PCR_MUX(5);
       else if(FTM0_CH2 == PTE29)
         PORT_PCR_REG(PORTE,29)=PORT_PCR_MUX(3);
       else if(FTM0_CH2 == PTC5)
@@ -67,7 +68,7 @@ void FTM_PWM_init(FTM_Type* ftmn,unsigned char ch, u32 freq, u32 duty)
       else if(FTM0_CH3 == PTE30)
         PORT_PCR_REG(PORTE,30)=PORT_PCR_MUX(3);
       else if(FTM0_CH3 == PTD3)
-        PORT_PCR_REG(PORTD,3)=PORT_PCR_MUX(4);
+        PORT_PCR_REG(PORTD,3)=PORT_PCR_MUX(5);
       break;
     case CH4:
       if(FTM0_CH4 == PTD4)
@@ -239,6 +240,7 @@ void FTM_PWM_Duty(FTM_Type * ftmn,unsigned char ch, u32 duty)
 {
   u32 cv;
   u32 mod;
+  ASSERT((duty>=0)&&(duty<=FTM_PRECISON),"FTM PWMduty error");
   mod = FTM_MOD_REG(ftmn);        //读取 MOD 的值
   cv = (duty * (mod - 0 + 1)) / FTM_PRECISON;
   FTM_CnV_REG(ftmn, ch) = cv;
@@ -246,8 +248,7 @@ void FTM_PWM_Duty(FTM_Type * ftmn,unsigned char ch, u32 duty)
 
 void FTM_QD_Init(FTM_Type * ftmn)
 {
-
-
+  ASSERT((ftmn==FTM1)||(ftmn==FTM2),"FTM module error");
   /******************* 开启时钟 和 复用IO口*******************/
   switch((u32)ftmn)
   {
@@ -297,15 +298,16 @@ void FTM_QD_Init(FTM_Type * ftmn)
   FTM_QDCTRL_REG(ftmn) |=  FTM_QDCTRL_QUADMODE_MASK;
   FTM_CNTIN_REG(ftmn)   = 0;
   FTM_MOD_REG(ftmn)     = FTM_MOD_MOD_MASK;
-  FTM_QDCTRL_REG(ftmn) |=  FTM_QDCTRL_QUADEN_MASK;    //FTM_QDCTRL_QUADMODE_MASK
+  FTM_QDCTRL_REG(ftmn) |=  FTM_QDCTRL_QUADEN_MASK;    //FTM_QDCTRL_QUADMODE_MASK QUADMODE 0:相位模式 1:方向模式
   FTM_MODE_REG(ftmn)  |= FTM_MODE_FTMEN_MASK;
   FTM_CNT_REG(ftmn)     = 0;                    //计数器。只有低16位可用（写任何值到此寄存器，都会加载 CNTIN 的值）
 }
 
 int16 FTM_QD_Get(FTM_Type * ftmn)
 {
-    int16 val;
-    val = FTM_CNT_REG(ftmn);
-    FTM_CNT_REG(ftmn) = 0;
-    return val;
+  ASSERT((ftmn==FTM1)||(ftmn==FTM2),"FTM module error");
+  int16 val;
+  val = FTM_CNT_REG(ftmn);
+  FTM_CNT_REG(ftmn) = 0;
+  return val;
 }

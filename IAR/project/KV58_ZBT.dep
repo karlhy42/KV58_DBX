@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>4</fileVersion>
-    <fileChecksum>847265244</fileChecksum>
+    <fileChecksum>3033832820</fileChecksum>
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
             <file>$PROJ_DIR$\..\src\app\define.c</file>
             <file>$PROJ_DIR$\..\src\app\define.h</file>
             <file>$PROJ_DIR$\..\src\app\include.h</file>
@@ -19,6 +18,8 @@
             <file>$PROJ_DIR$\..\src\drivers\ADC.h</file>
             <file>$PROJ_DIR$\..\src\drivers\common.c</file>
             <file>$PROJ_DIR$\..\src\drivers\common.h</file>
+            <file>$PROJ_DIR$\..\src\drivers\DMA.c</file>
+            <file>$PROJ_DIR$\..\src\drivers\DMA.h</file>
             <file>$PROJ_DIR$\..\src\drivers\Flash.c</file>
             <file>$PROJ_DIR$\..\src\drivers\Flash.h</file>
             <file>$PROJ_DIR$\..\src\drivers\Font.h</file>
@@ -27,10 +28,7 @@
             <file>$PROJ_DIR$\..\src\drivers\GPIO.c</file>
             <file>$PROJ_DIR$\..\src\drivers\GPIO.h</file>
             <file>$PROJ_DIR$\..\src\drivers\GUI.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_uart_edma.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_uart.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_notifier.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_log.o</file>
+            <file>$PROJ_DIR$\..\src\drivers\i2c.c</file>
             <file>$PROJ_DIR$\Debug\Obj\gfx_mk.o</file>
             <file>$PROJ_DIR$\Debug\Obj\define.o</file>
             <file>$PROJ_DIR$\Debug\Obj\fsl_assert.o</file>
@@ -79,77 +77,6 @@
             <file>$PROJ_DIR$\Debug\Obj\MKV58F1M0xxx24_Project.pbi</file>
             <file>$PROJ_DIR$\Debug\Obj\isr.pbi</file>
             <file>$PROJ_DIR$\Debug\Obj\fsl_shell.o</file>
-            <file>$PROJ_DIR$\..\src\drivers\i2c.c</file>
-            <file>$PROJ_DIR$\..\src\drivers\i2c.h</file>
-            <file>$PROJ_DIR$\..\src\drivers\LCD.c</file>
-            <file>$PROJ_DIR$\..\src\drivers\LCD.h</file>
-            <file>$PROJ_DIR$\..\src\drivers\logo.h</file>
-            <file>$PROJ_DIR$\..\src\drivers\NRF24L01.c</file>
-            <file>$PROJ_DIR$\..\src\drivers\NRF24L01.h</file>
-            <file>$PROJ_DIR$\..\src\drivers\OV7725.c</file>
-            <file>$PROJ_DIR$\..\src\drivers\OV7725.h</file>
-            <file>$PROJ_DIR$\..\src\drivers\OV7725_REG.h</file>
-            <file>$PROJ_DIR$\..\src\drivers\pit.c</file>
-            <file>$PROJ_DIR$\..\src\drivers\pit.h</file>
-            <file>$PROJ_DIR$\..\src\drivers\SCCB.c</file>
-            <file>$PROJ_DIR$\..\src\drivers\SCCB.h</file>
-            <file>$PROJ_DIR$\..\src\drivers\SPI.c</file>
-            <file>$PROJ_DIR$\..\src\drivers\SPI.h</file>
-            <file>$PROJ_DIR$\..\src\drivers\UART.c</file>
-            <file>$PROJ_DIR$\..\src\drivers\UART.h</file>
-            <file>$PROJ_DIR$\..\src\fsl\fsl_clock.c</file>
-            <file>$PROJ_DIR$\..\src\fsl\fsl_clock.h</file>
-            <file>$PROJ_DIR$\..\src\fsl\fsl_common.c</file>
-            <file>$PROJ_DIR$\..\src\fsl\fsl_common.h</file>
-            <file>$PROJ_DIR$\..\src\fsl\fsl_dma_manager.c</file>
-            <file>$PROJ_DIR$\..\src\fsl\fsl_dma_manager.h</file>
-            <file>$PROJ_DIR$\..\src\fsl\fsl_dmamux.c</file>
-            <file>$PROJ_DIR$\..\src\fsl\fsl_dmamux.h</file>
-            <file>$PROJ_DIR$\..\src\fsl\fsl_edma.c</file>
-            <file>$PROJ_DIR$\..\src\fsl\fsl_edma.h</file>
-            <file>$PROJ_DIR$\..\src\fsl\fsl_gpio.c</file>
-            <file>$PROJ_DIR$\..\src\fsl\fsl_gpio.h</file>
-            <file>$PROJ_DIR$\..\src\fsl\fsl_hsadc.c</file>
-            <file>$PROJ_DIR$\..\src\fsl\fsl_hsadc.h</file>
-            <file>$PROJ_DIR$\..\src\fsl\fsl_pit.c</file>
-            <file>$PROJ_DIR$\..\src\fsl\fsl_pit.h</file>
-            <file>$PROJ_DIR$\..\src\fsl\fsl_port.h</file>
-            <file>$PROJ_DIR$\..\src\fsl\fsl_sim.c</file>
-            <file>$PROJ_DIR$\..\src\fsl\fsl_sim.h</file>
-            <file>$PROJ_DIR$\..\src\fsl\fsl_uart.c</file>
-            <file>$PROJ_DIR$\..\src\fsl\fsl_uart.h</file>
-            <file>$PROJ_DIR$\..\src\fsl\fsl_uart_edma.c</file>
-            <file>$PROJ_DIR$\..\src\fsl\fsl_uart_edma.h</file>
-            <file>$PROJ_DIR$\..\src\fsl\MKV58F1M0xxx24_Project.c</file>
-            <file>$PROJ_DIR$\..\src\fsl\peripherals.c</file>
-            <file>$PROJ_DIR$\..\src\fsl\peripherals.h</file>
-            <file>$PROJ_DIR$\..\src\fsl\pin_mux.c</file>
-            <file>$PROJ_DIR$\..\src\fsl\pin_mux.h</file>
-            <file>$PROJ_DIR$\..\src\fsl\semihost_hardfault.c</file>
-            <file>$PROJ_DIR$\..\src\CMSIS\arm_math.h</file>
-            <file>$PROJ_DIR$\..\src\CMSIS\cmsis_compiler.h</file>
-            <file>$PROJ_DIR$\..\src\CMSIS\cmsis_version.h</file>
-            <file>$PROJ_DIR$\..\src\CMSIS\core_cm7.h</file>
-            <file>$PROJ_DIR$\..\src\CMSIS\fsl_device_registers.h</file>
-            <file>$PROJ_DIR$\..\src\CMSIS\MKV58F24.h</file>
-            <file>$PROJ_DIR$\..\src\CMSIS\MKV58F24_features.h</file>
-            <file>$PROJ_DIR$\..\src\utilities\fsl_assert.c</file>
-            <file>$PROJ_DIR$\..\src\utilities\fsl_debug_console.c</file>
-            <file>$PROJ_DIR$\..\src\utilities\fsl_io.c</file>
-            <file>$PROJ_DIR$\..\src\utilities\fsl_log.c</file>
-            <file>$PROJ_DIR$\..\src\utilities\fsl_notifier.c</file>
-            <file>$PROJ_DIR$\..\src\utilities\fsl_shell.c</file>
-            <file>$PROJ_DIR$\..\src\utilities\fsl_str.c</file>
-            <file>$PROJ_DIR$\..\src\startup\startup.c</file>
-            <file>$PROJ_DIR$\..\src\startup\startup_MKV58F24.s</file>
-            <file>$PROJ_DIR$\..\src\startup\system_MKV58F24.c</file>
-            <file>$PROJ_DIR$\..\src\startup\system_MKV58F24.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\drivers\gdisp\ILI9341\board_ILI9341.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\drivers\gdisp\ILI9341\gdisp_lld_config.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\drivers\gdisp\ILI9341\gdisp_lld_ILI9341.c</file>
-            <file>$PROJ_DIR$\..\src\ugfx\gfx.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gfx_mk.c</file>
-            <file>$PROJ_DIR$\..\src\ugfx\gfxconf.h</file>
             <file>$PROJ_DIR$\Debug\Obj\Loop.pbi</file>
             <file>$PROJ_DIR$\Debug\Obj\pin_mux.o</file>
             <file>$PROJ_DIR$\Debug\Obj\fsl_pit.o</file>
@@ -165,13 +92,14 @@
             <file>$PROJ_DIR$\Debug\Obj\fsl_hsadc.pbi</file>
             <file>$PROJ_DIR$\Debug\Obj\pin_mux.pbi</file>
             <file>$PROJ_DIR$\Debug\Obj\fsl_uart.pbi</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_io.pbi</file>
-            <file>$PROJ_DIR$\Debug\Obj\semihost_hardfault.pbi</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_assert.pbi</file>
-            <file>$PROJ_DIR$\Debug\Obj\gfx_mk.pbi</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_uart_edma.pbi</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_debug_console.pbi</file>
-            <file>$PROJ_DIR$\Debug\Obj\peripherals.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_uart_edma.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_uart.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_notifier.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_log.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\LPTMR.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\LPTMR.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\DMA.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\DMA.o</file>
             <file>$PROJ_DIR$\Debug\Obj\fsl_log.pbi</file>
             <file>$PROJ_DIR$\Debug\Obj\fsl_str.pbi</file>
             <file>$PROJ_DIR$\Debug\Obj\startup.pbi</file>
@@ -181,87 +109,75 @@
             <file>$PROJ_DIR$\Debug\Exe\KV58_ZBT.out</file>
             <file>$PROJ_DIR$\Debug\Obj\system_MKV58F24.pbi</file>
             <file>$PROJ_DIR$\Debug\Obj\KV58_ZBT.pbd</file>
-            <file>$PROJ_DIR$\Debug\Obj\peripherals.o</file>
             <file>$PROJ_DIR$\Debug\Obj\semihost_hardfault.o</file>
             <file>$PROJ_DIR$\Debug\Obj\fsl_io.o</file>
             <file>$PROJ_DIR$\Debug\Obj\fsl_sim.o</file>
             <file>$PROJ_DIR$\Debug\Obj\startup.o</file>
             <file>$PROJ_DIR$\Debug\Obj\fsl_debug_console.o</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gtrans\gtrans.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gos\gos_x_heap.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gfile\gfile_options.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\ginput\ginput_keyboard.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gos\gos_rules.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gwin\gwin_checkbox.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gaudio\gaudio.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\math.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gadc\gadc_rules.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gdisp\gdisp.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\ginput\ginput_options.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gwin\gwin_rules.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_float_setup.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gwin\gwin_widget.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gmisc\gmisc_rules.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gevent\gevent_options.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gos\gos_options.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gtrans\gtrans_options.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gdisp\gdisp_options.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gaudio\gaudio_options.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gdisp\gdisp_rules.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gtimer\gtimer_rules.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gfile\gfile_rules.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gfile\gfile.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gevent\gevent.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\ginput\ginput.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gos\gos_raw32.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gdisp\gdisp_colors.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gwin\gwin_progressbar.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\ginput\ginput_dial.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gfx_compilers.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gdriver\gdriver_options.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gmisc\gmisc_options.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gqueue\gqueue_options.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gtimer\gtimer_options.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gwin\gwin_options.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gadc\gadc_options.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\ginput\ginput_rules.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gaudio\gaudio_rules.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gevent\gevent_rules.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gqueue\gqueue_rules.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gtrans\gtrans_rules.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gdriver\gdriver_rules.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gos\gos.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gmisc\gmisc.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gqueue\gqueue.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gtimer\gtimer.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gwin\gwin.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gadc\gadc.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gos\gos_x_threads.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gwin\gwin_console.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gwin\gwin_button.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\gwin\gwin_label.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\ginput\ginput_mouse.h</file>
-            <file>$PROJ_DIR$\..\src\ugfx\src\ginput\ginput_toggle.h</file>
+            <file>$PROJ_DIR$\..\src\drivers\i2c.h</file>
+            <file>$PROJ_DIR$\..\src\drivers\LCD.c</file>
+            <file>$PROJ_DIR$\..\src\drivers\LCD.h</file>
+            <file>$PROJ_DIR$\..\src\drivers\logo.h</file>
+            <file>$PROJ_DIR$\..\src\drivers\LPTMR.c</file>
+            <file>$PROJ_DIR$\..\src\drivers\LPTMR.h</file>
+            <file>$PROJ_DIR$\..\src\drivers\NRF24L01.c</file>
+            <file>$PROJ_DIR$\..\src\drivers\NRF24L01.h</file>
+            <file>$PROJ_DIR$\..\src\drivers\OV7725.c</file>
+            <file>$PROJ_DIR$\..\src\drivers\OV7725.h</file>
+            <file>$PROJ_DIR$\..\src\drivers\OV7725_REG.h</file>
+            <file>$PROJ_DIR$\..\src\drivers\pit.c</file>
+            <file>$PROJ_DIR$\..\src\drivers\pit.h</file>
+            <file>$PROJ_DIR$\..\src\drivers\SCCB.c</file>
+            <file>$PROJ_DIR$\..\src\drivers\SCCB.h</file>
+            <file>$PROJ_DIR$\..\src\drivers\SPI.c</file>
+            <file>$PROJ_DIR$\..\src\drivers\SPI.h</file>
+            <file>$PROJ_DIR$\..\src\drivers\UART.c</file>
+            <file>$PROJ_DIR$\..\src\drivers\UART.h</file>
+            <file>$PROJ_DIR$\..\src\fsl\fsl_clock.c</file>
+            <file>$PROJ_DIR$\..\src\fsl\fsl_common.c</file>
+            <file>$PROJ_DIR$\..\src\fsl\fsl_dma_manager.c</file>
+            <file>$PROJ_DIR$\..\src\fsl\fsl_dmamux.c</file>
+            <file>$PROJ_DIR$\..\src\fsl\fsl_edma.c</file>
+            <file>$PROJ_DIR$\..\src\fsl\fsl_gpio.c</file>
+            <file>$PROJ_DIR$\..\src\fsl\fsl_hsadc.c</file>
+            <file>$PROJ_DIR$\..\src\fsl\fsl_pit.c</file>
+            <file>$PROJ_DIR$\..\src\fsl\fsl_sim.c</file>
+            <file>$PROJ_DIR$\..\src\fsl\fsl_uart.c</file>
+            <file>$PROJ_DIR$\..\src\fsl\fsl_uart_edma.c</file>
+            <file>$PROJ_DIR$\..\src\fsl\MKV58F1M0xxx24_Project.c</file>
+            <file>$PROJ_DIR$\..\src\fsl\pin_mux.c</file>
+            <file>$PROJ_DIR$\..\src\fsl\semihost_hardfault.c</file>
+            <file>$PROJ_DIR$\..\src\utilities\fsl_assert.c</file>
+            <file>$PROJ_DIR$\..\src\utilities\fsl_debug_console.c</file>
+            <file>$PROJ_DIR$\..\src\utilities\fsl_io.c</file>
+            <file>$PROJ_DIR$\..\src\utilities\fsl_log.c</file>
+            <file>$PROJ_DIR$\..\src\utilities\fsl_notifier.c</file>
+            <file>$PROJ_DIR$\..\src\utilities\fsl_shell.c</file>
+            <file>$PROJ_DIR$\..\src\utilities\fsl_str.c</file>
+            <file>$PROJ_DIR$\..\src\startup\startup.c</file>
+            <file>$PROJ_DIR$\..\src\startup\startup_MKV58F24.s</file>
+            <file>$PROJ_DIR$\..\src\startup\system_MKV58F24.c</file>
+            <file>$PROJ_DIR$\..\src\ugfx\drivers\gdisp\ILI9341\board_ILI9341.h</file>
+            <file>$PROJ_DIR$\..\src\ugfx\src\gdisp\gdisp_driver.h</file>
+            <file>$PROJ_DIR$\..\src\ugfx\drivers\gdisp\ILI9341\gdisp_lld_config.h</file>
+            <file>$PROJ_DIR$\..\src\ugfx\drivers\gdisp\ILI9341\gdisp_lld_ILI9341.c</file>
+            <file>$PROJ_DIR$\..\src\ugfx\gfx.h</file>
+            <file>$PROJ_DIR$\..\src\ugfx\src\gfx_mk.c</file>
+            <file>$PROJ_DIR$\..\src\ugfx\gfxconf.h</file>
+            <file>$PROJ_DIR$\..\src\ugfx\drivers\gdisp\ILI9341\ILI9341.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_io.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\semihost_hardfault.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_assert.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\gfx_mk.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_uart_edma.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_debug_console.pbi</file>
         </outputs>
         <file>
             <name>[ROOT_NODE]</name>
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 173</file>
+                    <file> 101</file>
                 </tool>
             </outputs>
         </file>
@@ -270,41 +186,55 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 27</file>
+                    <file> 25</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 149</file>
+                    <file> 76</file>
                 </tool>
             </outputs>
-            <inputs>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 191 7 122 235 142 107 192 207 95 228 243 244 121 114 77 80 239 126 108 99 2 18 87 139 15 124 123 203 125 93 226 230 233 237 241 245 247 248 119 103 112 101 105 13 20 89 85 82 144 11 91 75 138 205 202 187 199 206 200 224 225 227 229 231 232 234 236 238 240 242 209 246 249 3 197 190 198 0 127 210 184 211 208 212 195 213 196 214 193 215 204 216 186 217 182 218 194 219 189 220 183 140 221 201 188 222 185 223</file>
-                </tool>
-            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\..\src\app\isr.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 29</file>
+                    <file> 27</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 70</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\src\app\Loop.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 32</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
                     <file> 72</file>
                 </tool>
             </outputs>
-            <inputs>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 199 200 201 75 202 13 203 204 103 82 205 206 207 208 189 183 140 124 101 89 11 138 192 190 112 196 182 188 142 119 105 20 85 144 91 187 95 184 195 193 186 194 185 5 126 121 108 107 99 114 2 7 18 77 87 139 80 15 123 122 191 197 198 0 209 127 210 211 212 213 214 215 216 217 218 219 220 221 222 223 3 224 125 93 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249</file>
-                </tool>
-            </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\src\app\Loop.c</name>
+            <name>$PROJ_DIR$\..\src\app\Sys_init.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 33</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 53</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\src\drivers\ADC.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
@@ -312,12 +242,12 @@
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 145</file>
+                    <file> 54</file>
                 </tool>
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\src\app\Sys_init.c</name>
+            <name>$PROJ_DIR$\..\src\drivers\common.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
@@ -330,7 +260,20 @@
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\src\drivers\ADC.c</name>
+            <name>$PROJ_DIR$\..\src\drivers\DMA.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 94</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 93</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\src\drivers\Flash.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
@@ -343,7 +286,7 @@
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\src\drivers\common.c</name>
+            <name>$PROJ_DIR$\..\src\drivers\FTM.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
@@ -356,7 +299,7 @@
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\src\drivers\Flash.c</name>
+            <name>$PROJ_DIR$\..\src\drivers\GPIO.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
@@ -369,7 +312,7 @@
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\src\drivers\FTM.c</name>
+            <name>$PROJ_DIR$\..\src\drivers\i2c.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
@@ -382,7 +325,7 @@
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\src\drivers\GPIO.c</name>
+            <name>$PROJ_DIR$\..\src\drivers\LCD.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
@@ -395,28 +338,15 @@
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\src\drivers\i2c.c</name>
+            <name>$PROJ_DIR$\..\src\drivers\LPTMR.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 41</file>
+                    <file> 92</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 61</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\src\drivers\LCD.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 42</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 62</file>
+                    <file> 91</file>
                 </tool>
             </outputs>
         </file>
@@ -425,16 +355,42 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 43</file>
+                    <file> 41</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 66</file>
+                    <file> 64</file>
                 </tool>
             </outputs>
         </file>
         <file>
             <name>$PROJ_DIR$\..\src\drivers\OV7725.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 42</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 61</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\src\drivers\pit.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 43</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 62</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\src\drivers\SCCB.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
@@ -447,24 +403,11 @@
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\src\drivers\pit.c</name>
+            <name>$PROJ_DIR$\..\src\drivers\SPI.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
                     <file> 45</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 64</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\src\drivers\SCCB.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 46</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
@@ -473,28 +416,15 @@
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\src\drivers\SPI.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 47</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 67</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
             <name>$PROJ_DIR$\..\src\drivers\UART.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 48</file>
+                    <file> 46</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 68</file>
+                    <file> 66</file>
                 </tool>
             </outputs>
         </file>
@@ -503,11 +433,11 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 50</file>
+                    <file> 48</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 151</file>
+                    <file> 78</file>
                 </tool>
             </outputs>
         </file>
@@ -516,11 +446,11 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 52</file>
+                    <file> 50</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 152</file>
+                    <file> 79</file>
                 </tool>
             </outputs>
         </file>
@@ -529,11 +459,11 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 54</file>
+                    <file> 52</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 156</file>
+                    <file> 83</file>
                 </tool>
             </outputs>
         </file>
@@ -542,11 +472,11 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 53</file>
+                    <file> 51</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 153</file>
+                    <file> 80</file>
                 </tool>
             </outputs>
         </file>
@@ -555,11 +485,11 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 49</file>
+                    <file> 47</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 154</file>
+                    <file> 81</file>
                 </tool>
             </outputs>
         </file>
@@ -568,11 +498,11 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 51</file>
+                    <file> 49</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 155</file>
+                    <file> 82</file>
                 </tool>
             </outputs>
         </file>
@@ -581,11 +511,11 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 31</file>
+                    <file> 29</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 157</file>
+                    <file> 84</file>
                 </tool>
             </outputs>
         </file>
@@ -594,11 +524,11 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 147</file>
+                    <file> 74</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 69</file>
+                    <file> 67</file>
                 </tool>
             </outputs>
         </file>
@@ -607,11 +537,11 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 179</file>
+                    <file> 106</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 70</file>
+                    <file> 68</file>
                 </tool>
             </outputs>
         </file>
@@ -620,11 +550,11 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 23</file>
+                    <file> 88</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 159</file>
+                    <file> 86</file>
                 </tool>
             </outputs>
         </file>
@@ -633,7 +563,7 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 22</file>
+                    <file> 87</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
@@ -646,24 +576,11 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 150</file>
+                    <file> 77</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 71</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\src\fsl\peripherals.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 176</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 166</file>
+                    <file> 69</file>
                 </tool>
             </outputs>
         </file>
@@ -672,11 +589,11 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 146</file>
+                    <file> 73</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 158</file>
+                    <file> 85</file>
                 </tool>
             </outputs>
         </file>
@@ -685,7 +602,7 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 177</file>
+                    <file> 104</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
@@ -698,7 +615,7 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 28</file>
+                    <file> 26</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
@@ -711,7 +628,7 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 181</file>
+                    <file> 108</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
@@ -724,7 +641,7 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 178</file>
+                    <file> 105</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
@@ -737,11 +654,11 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 25</file>
+                    <file> 90</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 167</file>
+                    <file> 95</file>
                 </tool>
             </outputs>
         </file>
@@ -750,11 +667,11 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 24</file>
+                    <file> 89</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 171</file>
+                    <file> 99</file>
                 </tool>
             </outputs>
         </file>
@@ -763,11 +680,11 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 73</file>
+                    <file> 71</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 170</file>
+                    <file> 98</file>
                 </tool>
             </outputs>
         </file>
@@ -776,11 +693,11 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 148</file>
+                    <file> 75</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 168</file>
+                    <file> 96</file>
                 </tool>
             </outputs>
         </file>
@@ -789,11 +706,11 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 180</file>
+                    <file> 107</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 169</file>
+                    <file> 97</file>
                 </tool>
             </outputs>
         </file>
@@ -802,7 +719,7 @@
             <outputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 30</file>
+                    <file> 28</file>
                 </tool>
             </outputs>
         </file>
@@ -811,11 +728,11 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 33</file>
+                    <file> 31</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 174</file>
+                    <file> 102</file>
                 </tool>
             </outputs>
         </file>
@@ -824,11 +741,11 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 32</file>
+                    <file> 30</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 172</file>
+                    <file> 100</file>
                 </tool>
             </outputs>
         </file>
@@ -837,7 +754,7 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 26</file>
+                    <file> 24</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>

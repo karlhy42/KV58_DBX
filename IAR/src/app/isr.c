@@ -7,6 +7,15 @@
 
 #include "include.h"
 #include "isr.h"
+void Error_handler(unsigned char* Log)  //错误处理，ASSERT和HARDFAULT都会掉入此函数
+{
+  DisableInterrupts;
+  //紧急处理
+  
+  while(1);//终止程序运行
+}
+
 void HardFault_Handler(void)
 {
+  Error_handler("HardFault");
 }

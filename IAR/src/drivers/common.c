@@ -19,12 +19,7 @@ void ASSERT(unsigned char x,unsigned char* Log)
   if(x)
     return;
   else
-  {
-    while(1)
-    {
-      ; //错误 错误说明为Log
-    }
-  }
+    Error_handler(Log);
 }
 
 void  delayms(uint32  ms)

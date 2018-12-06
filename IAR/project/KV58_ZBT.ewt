@@ -2417,6 +2417,12 @@
             <name>$PROJ_DIR$\..\src\drivers\common.h</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\..\src\drivers\DMA.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\src\drivers\DMA.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\src\drivers\Flash.c</name>
         </file>
         <file>
@@ -2454,6 +2460,12 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\src\drivers\logo.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\src\drivers\LPTMR.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\src\drivers\LPTMR.h</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\src\drivers\NRF24L01.c</name>
@@ -2568,12 +2580,6 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\src\fsl\MKV58F1M0xxx24_Project.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\src\fsl\peripherals.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\src\fsl\peripherals.h</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\src\fsl\pin_mux.c</name>
