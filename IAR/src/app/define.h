@@ -7,19 +7,22 @@
 
 #ifndef DEFINE_H_
 #define DEFINE_H_
-#define MYCAR_A
-//#define MYCAR_B
 
+//Parameter-Do not remove
 #define Camera_CNST 85
 #define NRF_LINKADDRESS {0x74, 0x18, 0x52, 0x96, 0x30}
 
-//CAM
+//SD-Do not remove
+#define BOARD_SDSPI_SPI_BASE SPI0_BASE
+#define BOARD_SDSPI_SPI_PCS_NUMBER 0U
+
+//CAM-Do not remove
 #define PCLK_PORT PORTC,9
 #define VSYNC_PORT PORTB,23
 #define VSYNC_IRQ PORTB_IRQn
 #define VSYNC_ISFR PORTB_ISFR
 
-//LCD
+//LCD-Do not remove
 #define LCD_RST_PORT PORTE,27
 #define LCD_RS_PORT PORTE,0
 #define LCD_SDA_PORT PORTE,1
@@ -34,12 +37,11 @@
 #define scl PTE2_OUT
 #define reset PTE27_OUT
 
-//nRF
+//nRF-Do not remove
 #define NRF_SPIn kSPI0
 #define NRF_PCSn SPIn_PCS0
 #define NRF_CE_PORT PORTA,25
 #define NRF_IRQ_PORT PORTA,24
-
 #define NRF_CE PTA25_OUT
 #define NRF_IRQ PTA24_OUT
 

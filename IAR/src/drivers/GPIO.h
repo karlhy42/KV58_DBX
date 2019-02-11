@@ -656,5 +656,6 @@ typedef enum PORT_CFG
 
 void GPIO_Init(PORT_Type* ptn, u8 n, PORT_CFG cfg,u8 data);
 void port_init(PORT_Type* ptn, u8 n, PORT_CFG cfg);
+void exti_init(PORT_Type* ptn, u8 n, PORT_CFG cfg);
 void port_NOMUX(PORT_Type* ptn, u8 n);
 #endif /* USER_DRIVER_GPIO_GPIO_H_ */

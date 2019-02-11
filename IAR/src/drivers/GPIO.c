@@ -91,6 +91,42 @@ void port_init(PORT_Type* ptn, u8 n, PORT_CFG cfg)
     break;
   }
   GPIO_PDDR_REG(port) &= ~(1<<n);
+  PORT_PCR_REG(ptn, n) = cfg & 0x1FF8FFF;     //去除无效位上的值
+  if(cfg >= LOW_ISR)
+    NVIC_EnableIRQ(IRQn);
+}
+
+void exti_init(PORT_Type* ptn, u8 n, PORT_CFG cfg)
+{
+  GPIO_Type * port;
+  IRQn_Type IRQn;
+  ASSERT((n>=0)&&(n<32),"Pin number error");
+  switch((u32)ptn)
+  {
+  case PORTA_BASE:
+    port = GPIOA;
+    IRQn=PORTA_IRQn;
+    break;
+  case PORTB_BASE:
+    port = GPIOB;
+    IRQn=PORTB_IRQn;
+    break;
+  case PORTC_BASE:
+    port = GPIOC;
+    IRQn=PORTC_IRQn;
+    break;
+  case PORTD_BASE:
+    port = GPIOD;
+    IRQn=PORTD_IRQn;
+    break;
+  case PORTE_BASE:
+    port = GPIOE;
+    IRQn=PORTE_IRQn;
+    break;
+  default:
+    break;
+  }
+  GPIO_PDDR_REG(port) &= ~(1<<n);
   PORT_PCR_REG(ptn, n) = cfg & 0x1FF8FFF | (PORT_PCR_MUX(1)) ;     //去除无效位上的值
   if(cfg >= LOW_ISR)
     NVIC_EnableIRQ(IRQn);

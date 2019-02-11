@@ -43,11 +43,11 @@
 
 /**********************************  SPI  *******************************************/
 
-#define SPI0_SCK    PTD1        //PTE17、PTA15、PTC5 、PTD1
-#define SPI0_SOUT   PTD2        //PTE18、PTA16、PTC6 、PTD2
-#define SPI0_SIN    PTD3        //PTE19、PTA17、PTC7 、PTD3
+#define SPI0_SCK    PTA15       //PTE17、PTA15、PTC5 、PTD1
+#define SPI0_SOUT   PTA16       //PTE18、PTA16、PTC6 、PTD2
+#define SPI0_SIN    PTA17       //PTE19、PTA17、PTC7 、PTD3
 
-#define SPI0_PCS0   PTD0        //PTE16、PTA14、PTC0 、PTC4 、PTD0
+#define SPI0_PCS0   PTA14       //PTE16、PTA14、PTC0 、PTC4 、PTD0
 #define SPI0_PCS1   NULL        //PTC3 、PTD4
 #define SPI0_PCS2   NULL        //PTC2 、PTD5
 #define SPI0_PCS3   NULL        //PTC1 、PTD6

@@ -58,10 +58,10 @@ void Sysclk_init(void)
   FMC_PFAPR |= FMC_PFAPR_M3PFD_MASK | FMC_PFAPR_M2PFD_MASK
     | FMC_PFAPR_M1PFD_MASK | FMC_PFAPR_M0PFD_MASK;
   //MCG=PLL, system (CPU) clock= MCG,
-  SIM_CLKDIV1 =  SIM_CLKDIV1_OUTDIV1(0)    //system (CPU) clock		//275
-               | SIM_CLKDIV1_OUTDIV2(1)    //Fast Peripheral clock	//137.5
-               | SIM_CLKDIV1_OUTDIV3(3)    //Flexbus clock		//68.75
-               | SIM_CLKDIV1_OUTDIV4(9);   //Bus /Flash clock		//27.5
+  SIM_CLKDIV1 =  SIM_CLKDIV1_OUTDIV1(0)    //system (CPU) clock		//240
+               | SIM_CLKDIV1_OUTDIV2(1)    //Fast Peripheral clock	//120
+               | SIM_CLKDIV1_OUTDIV3(3)    //Flexbus clock		//60
+               | SIM_CLKDIV1_OUTDIV4(9);   //Bus /Flash clock		//24
   //存FMC_PFAPR原始值
   FMC_PFAPR = temp_reg;
   MCG_C6 = MCG_C6_PLLS_MASK | MCG_C6_VDIV(VDIV);
@@ -76,6 +76,10 @@ void Sysclk_init(void)
   fastperipheral_clk_khz = core_clk_khz/2;
   flexbus_clk_khz = core_clk_khz/4;
   bus_clk_khz = core_clk_khz/10;
+  
+  SIM_SCGC5 |=
+    (SIM_SCGC5_PORTA_MASK | SIM_SCGC5_PORTB_MASK | SIM_SCGC5_PORTC_MASK
+     | SIM_SCGC5_PORTD_MASK | SIM_SCGC5_PORTE_MASK);    //开全部端口时钟
 }
 
 int main(void) {
