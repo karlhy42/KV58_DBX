@@ -8,6 +8,7 @@
 #ifndef USER_DRIVER_COMMON_H_
 #define USER_DRIVER_COMMON_H_
 
+#define OSC_FREQ_MHZ (48)
 #define HIGH (1u)
 #define LOW (0u)
 #define EnableInterrupts  asm(" CPSIE i");//开总中断

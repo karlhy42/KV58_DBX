@@ -47,6 +47,7 @@
 #include "Flash.h"
 #include "i2c.h"
 #include "ff.h"
+#include "LPTMR.h"
 
 //User
 

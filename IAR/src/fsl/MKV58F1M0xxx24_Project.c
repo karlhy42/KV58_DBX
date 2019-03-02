@@ -72,7 +72,7 @@ void Sysclk_init(void)
   MCG_C1=0x00;
   while (((MCG_S & MCG_S_CLKST_MASK) >> MCG_S_CLKST_SHIFT) != 0x3){};   //µÈ´ýMCGOUTCLKÇÐ»»µ½PLLÊä³ö
 
-  core_clk_khz = 48*1000*(VDIV+16)/(PRDIV+1)/2;
+  core_clk_khz = OSC_FREQ_MHZ*1000*(VDIV+16)/(PRDIV+1)/2;
   fastperipheral_clk_khz = core_clk_khz/2;
   flexbus_clk_khz = core_clk_khz/4;
   bus_clk_khz = core_clk_khz/10;
