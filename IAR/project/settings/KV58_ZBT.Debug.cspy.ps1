@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\common\bin\cspybat" -f "F:\KV58_project\KV58_ZBT\IAR\project\settings\KV58_ZBT.Debug.general.xcl" --backend -f "F:\KV58_project\KV58_ZBT\IAR\project\settings\KV58_ZBT.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\common\bin\cspybat" -f "C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\project\settings\KV58_ZBT.Debug.general.xcl" --backend -f "C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\project\settings\KV58_ZBT.Debug.driver.xcl" 
 }
 else
 {
-& "D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\common\bin\cspybat" -f "F:\KV58_project\KV58_ZBT\IAR\project\settings\KV58_ZBT.Debug.general.xcl" --debug_file=$debugfile --backend -f "F:\KV58_project\KV58_ZBT\IAR\project\settings\KV58_ZBT.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\common\bin\cspybat" -f "C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\project\settings\KV58_ZBT.Debug.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\project\settings\KV58_ZBT.Debug.driver.xcl" 
 }
