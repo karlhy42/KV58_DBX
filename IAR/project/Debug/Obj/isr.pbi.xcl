@@ -5,6 +5,32 @@
 -I
 C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\src\app
 -I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\project\..\src\app
+-I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\project\..\src\CMSIS
+-I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\project\..\src\Control
+-I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\project\..\src\drivers
+-I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\project\..\src\fatfs
+-I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\project\..\src\fsl
+-I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\project\..\src\startup
+-I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\project\..\src\utilities
+-I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\project\..\src
+-I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\project\..\src\ugfx
+-I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\project\..\src\ugfx\drivers\gdisp\ILI9341
+-I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\project\..\src\ugfx\src\gdisp
+-I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\project\..\src\ugfx\src
+-I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\CMSIS\Core\Include
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\CMSIS\DSP\Include
@@ -12,6 +38,32 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\CMSIS\DSP\Include
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\inc\c
+-I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\src\app
+-I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\src\CMSIS
+-I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\src\Control
+-I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\src\drivers
+-I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\src\fatfs
+-I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\src\fsl
+-I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\src\startup
+-I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\src\utilities
+-I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\src
+-I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\src\ugfx
+-I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\src\ugfx\drivers\gdisp\ILI9341
+-I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\src\ugfx\src\gdisp
+-I
+C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\src\ugfx\src
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\CMSIS\Core\Include
 -I
@@ -310,6 +362,7 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\CMSIS\DSP\Include
 -D__EDG_CPP11_IL_EXTENSIONS_SUPPORTED=1
 -D__EDG_FLOAT80_ENABLING_POSSIBLE=0
 -D__EDG_FLOAT128_ENABLING_POSSIBLE=0
+-DCPU_MKV58F1M0VLQ24=1
 -DARM_MATH_CM7=1
 -D_DLIB_CONFIG_FILE_HEADER_NAME="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\arm\\inc\\c\\DLib_Config_Full.h"
 -D_DLIB_CONFIG_FILE_STRING="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\arm\\inc\\c\\DLib_Config_Full.h"
