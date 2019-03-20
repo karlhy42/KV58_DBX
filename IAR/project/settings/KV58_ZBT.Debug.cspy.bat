@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\common\bin\cspybat" -f "C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\project\settings\KV58_ZBT.Debug.general.xcl" --backend -f "C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\project\settings\KV58_ZBT.Debug.driver.xcl" 
+"D:\IAR\common\bin\cspybat" -f "C:\Users\zhji-\Documents\GitHub\KV58_DBX\IAR\project\settings\KV58_ZBT.Debug.general.xcl" --backend -f "C:\Users\zhji-\Documents\GitHub\KV58_DBX\IAR\project\settings\KV58_ZBT.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\common\bin\cspybat" -f "C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\project\settings\KV58_ZBT.Debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\project\settings\KV58_ZBT.Debug.driver.xcl" 
+"D:\IAR\common\bin\cspybat" -f "C:\Users\zhji-\Documents\GitHub\KV58_DBX\IAR\project\settings\KV58_ZBT.Debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\zhji-\Documents\GitHub\KV58_DBX\IAR\project\settings\KV58_ZBT.Debug.driver.xcl" 
 
 @echo off 
 :end

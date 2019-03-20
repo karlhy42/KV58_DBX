@@ -1,12 +1,12 @@
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\bin\armproc.dll" 
+"D:\IAR\arm\bin\armproc.dll" 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\bin\armJET.dll" 
+"D:\IAR\arm\bin\armJET.dll" 
 
-"C:\Users\Administrator.CN-20181005PBLK\Documents\GitHub\KV58_DBX\IAR\project\Debug\Exe\KV58_ZBT.out" 
+"C:\Users\zhji-\Documents\GitHub\KV58_DBX\IAR\project\Debug\Exe\KV58_ZBT.out" 
 
---plugin="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\bin\armbat.dll" 
+--plugin="D:\IAR\arm\bin\armbat.dll" 
 
---device_macro="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\NXP\KV5x.dmac" 
+--device_macro="D:\IAR\arm\config\debugger\NXP\KV5x.dmac" 
 
 
 
