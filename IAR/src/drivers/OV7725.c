@@ -11,8 +11,10 @@
 #include "OV7725.h"
 #include "OV7725_REG.h"
 
-unsigned char Image_USE[CAMERA_H + 1][CAMERA_DMA_NUM] = { { 0 } };
-unsigned char Image_TMP[CAMERA_H + 1][CAMERA_DMA_NUM] = { { 0 } };
+u8 Memory_use_Flag=1;
+u8 Image_fire_Memory1[CAMERA_H+1][CAMERA_DMA_NUM]={{0}};
+u8 Image_fire_Memory2[CAMERA_H+1][CAMERA_DMA_NUM]={{0}};
+u8 (*Image_fire)[CAMERA_DMA_NUM];//指针
 volatile u8 img_flag = IMG_FINISH;		//图像状态
 edma_tcd_t OV7725_tcd;
 edma_handle_t g_EDMA_Handle;
@@ -23,66 +25,42 @@ edma_transfer_config_t DMA_Transfer_config;
 void Ov7725_exti_Init()
 {
   //FIFO端口初始化
-  GPIO_Init(PORTC, 0, GPI, HIGH);
-  GPIO_Init(PORTC, 1, GPI, HIGH);
-  GPIO_Init(PORTC, 2, GPI, HIGH);
-  GPIO_Init(PORTC, 3, GPI, HIGH);
-  GPIO_Init(PORTC, 4, GPI, HIGH);
-  GPIO_Init(PORTC, 5, GPI, HIGH);
-  GPIO_Init(PORTC, 6, GPI, HIGH);
-  GPIO_Init(PORTC, 7, GPI, HIGH);
-  //DMA通道0初始化，上升沿触发DMA传输，源地址为PTD_BYTE0_IN，目的地址为：BUFF ，每次传输1Byte，传输CAMERA_SIZE次后停止传输
-  port_init(PCLK_PORT, DMA_RISING | PULL_UP);    //PCLK
-  port_init(VSYNC_PORT, RISING | PULL_DOWN | PF);    //场中断，下拉，下降沿触发中断，带滤波
+  for(int i = 0;i<8;i++)
+    GPIO_Init(CMA_DATA_PORT, CMA_DATA0_PIN+i, GPI, HIGH);
+  port_init(PCLK_PORT, ALT1 | DMA_FALLING | PULL_UP);    //PCLK
+  exti_init(VSYNC_PORT, RISING | PULL_DOWN | PF);    //场中断，下拉，下降沿触发中断，带滤波
   NVIC_DisableIRQ(VSYNC_IRQ);
   //关闭PTB的中断
-  DMAMUX_Init(DMAMUX);
-  DMAMUX_SetSource(DMAMUX, CAMERA_DMA_CH, 51);	//PORTC
-  DMAMUX_EnableChannel(DMAMUX, CAMERA_DMA_CH);
-}
-
-void DMATransfer_Init()
-{
-  DMA_Transfer_config.srcAddr = (uint32_t)(&PTC_BYTE0_IN);
-  DMA_Transfer_config.srcOffset = 0x00u;
-  DMA_Transfer_config.destAddr = (uint32_t)(Image_TMP);
-  DMA_Transfer_config.destOffset = 0x01u;
-  DMA_Transfer_config.destTransferSize = kEDMA_TransferSize1Bytes;
-  DMA_Transfer_config.srcTransferSize = kEDMA_TransferSize1Bytes;
-  DMA_Transfer_config.majorLoopCounts = 9600;
-  DMA_Transfer_config.minorLoopBytes = 0x01u;
-  
-  EDMA_ResetChannel(DMA0,4);
-  EDMA_SetTransferConfig(DMA0,4,&DMA_Transfer_config,NULL);
-  
-  EDMA_SetBandWidth(DMA0,4,kEDMA_BandwidthStallNone);
-  EDMA_EnableAutoStopRequest(DMA0,4,true);
-  EDMA_EnableChannelInterrupts(DMA0,4,kEDMA_MajorInterruptEnable);
-  
-  DMAMUX_SetSource(DMAMUX,4,51);
-  DMAMUX_EnableChannel(DMAMUX,4);
-  
-  EDMA_ClearChannelStatusFlags(DMA0,4,kEDMA_InterruptFlag);
-  
-  PORT_SetPinInterruptConfig(PORTC,9u,kPORT_DMARisingEdge);
-  
-  NVIC_EnableIRQ(DMA4_DMA20_IRQn);
-  DMA0->SERQ = DMA_SERQ_SERQ(4);
+  Image_fire=&Image_fire_Memory1[0];
 }
 
 void ov7725_get_img()
 {
   img_flag = IMG_START;			//开始采集图像
-  //	EDMA_ResetChannel(g_EDMA_Handle.base, g_EDMA_Handle.channel);
-  //	EDMA_InstallTCDMemory(&g_EDMA_Handle, &OV7725_tcd, 1);
-  //	EDMA_SubmitTransfer(&g_EDMA_Handle, &DMA_Transfer_config);
-  //	EDMA_StartTransfer(&g_EDMA_Handle);
   NVIC_DisableIRQ(VSYNC_IRQ);
-  DMATransfer_Init();
+  if(Memory_use_Flag==2)
+  {
+    Memory_use_Flag=1;
+  }
+  else if(Memory_use_Flag==1)  
+  {
+    Memory_use_Flag=2;
+  }
+  DMA_IRQ_EN(CAMERA_DMA_CH);
+  DMA_EN(CAMERA_DMA_CH);
 }
 
 void Camera_start(void)
 {
+  if(Memory_use_Flag==2)
+  {
+    DMA_PORTx2BUFF_Init(CAMERA_DMA_CH,CAM_SOURCEADDR,Image_fire_Memory2,DMA_BYTE1,CAMERA_SIZE,CAM_DMASOURCE,DMA_PERIPHERAL_TO_MEMORY,DMA_REVERT);
+  }
+  else if(Memory_use_Flag==1)
+  {
+    DMA_PORTx2BUFF_Init(CAMERA_DMA_CH,CAM_SOURCEADDR,Image_fire_Memory1,DMA_BYTE1,CAMERA_SIZE,CAM_DMASOURCE,DMA_PERIPHERAL_TO_MEMORY,DMA_REVERT);
+  }
+  DMA_DIS(CAMERA_DMA_CH);
   VSYNC_ISFR = ~0;
   NVIC_EnableIRQ(VSYNC_IRQ);
 }

@@ -50,5 +50,11 @@
 #include "LPTMR.h"
 
 //User
+extern u8 Memory_use_Flag;
+extern u8 Image_fire_Memory1[CAMERA_H+1][CAMERA_DMA_NUM];
+extern u8 Image_fire_Memory2[CAMERA_H+1][CAMERA_DMA_NUM];
+extern u8 (*Image_fire)[CAMERA_DMA_NUM];//÷∏’Î
+extern u8 Image_Flag;
 
+extern int sp,ang;
 #endif /* INCLUDE_H_ */

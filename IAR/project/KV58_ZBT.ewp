@@ -221,6 +221,9 @@
                 <option>
                     <name>CCDefines</name>
                     <state>CPU_MKV58F1M0VLQ24</state>
+                    <state>IAR</state>
+                    <state>DEBUG</state>
+                    <state>_DLIB_FILE_DESCRIPTOR</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -260,7 +263,7 @@
                 </option>
                 <option>
                     <name>CCDiagSuppress</name>
-                    <state></state>
+                    <state>Pa182,Pa082</state>
                 </option>
                 <option>
                     <name>CCDiagRemark</name>
@@ -281,7 +284,7 @@
                 <option>
                     <name>CCAllowList</name>
                     <version>1</version>
-                    <state>00000000</state>
+                    <state>10010100</state>
                 </option>
                 <option>
                     <name>CCDebugInfo</name>
@@ -373,7 +376,7 @@
                 </option>
                 <option>
                     <name>CCOptLevel</name>
-                    <state>1</state>
+                    <state>2</state>
                 </option>
                 <option>
                     <name>CCOptStrategy</name>
@@ -382,7 +385,7 @@
                 </option>
                 <option>
                     <name>CCOptLevelSlave</name>
-                    <state>1</state>
+                    <state>2</state>
                 </option>
                 <option>
                     <name>CompilerMisraRules98</name>
@@ -772,11 +775,11 @@
                 </option>
                 <option>
                     <name>IlinkIcfOverride</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>lnk0t.icf</state>
+                    <state>$PROJ_DIR$\..\project\MKV58F1M0xxx24_flash.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -836,7 +839,7 @@
                 </option>
                 <option>
                     <name>IlinkProgramEntryLabel</name>
-                    <state></state>
+                    <state>__iar_program_start</state>
                 </option>
                 <option>
                     <name>DoFill</name>
@@ -1009,7 +1012,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state>###Unitialized###</state>
+                    <state>KV58_ZBT_import_lib.o</state>
                 </option>
             </data>
         </settings>

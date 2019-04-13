@@ -29,7 +29,7 @@
 #define FTM3_CH1    PTE6        //PTE6 、PTD1
 #define FTM3_CH2    PTE7        //PTE7 、PTA18、PTB18、PTD2
 #define FTM3_CH3    PTE8        //PTE8 、PTB19、PTD3
-#define FTM3_CH4    PTE9        //PTE9 、PTC8 、
+#define FTM3_CH4    PTC8        //PTE9 、PTC8 、
 #define FTM3_CH5    PTE10       //PTE10、PTC9 、
 #define FTM3_CH6    PTE11       //PTE11、PTC10
 #define FTM3_CH7    PTE12       //PTE12、PTC11
@@ -60,7 +60,7 @@
 #define SPI1_SIN    PTE3        //PTE3 、PTB17、PTD7
 
 #define SPI1_PCS0   PTE4        //PTE4 、PTB10、PTD4
-#define SPI1_PCS1   NULL        //PTE0 、PTB9
+#define SPI1_PCS1   PTE0        //PTE0 、PTB9
 #define SPI1_PCS2   NULL        //PTE5
 #define SPI1_PCS3   NULL        //PTE6
 

@@ -117,6 +117,8 @@ typedef enum
   DMA_KEEPON
 }DMA_DLASTCFG;
 
+void DMA_PORTx2BUFF_Init(u8 CHn, void *SADDR, void *DADDR,DMA_BYTEn byten,u32 count,DMA_REQUEST_SOURCE Source ,DMA_TYPE type,DMA_DLASTCFG keepon);
+
 #define  DMA_IRQ_EN(DMACHn)    NVIC_EnableIRQ((DMACHn) + 0)                     //允许DMA通道传输
 #define  DMA_IRQ_DIS(DMA_CHn)   NVIC_DisableIRQ((DMA_CHn) + 0)                    //禁止DMA通道传输
 #define  DMA_IRQ_CLEAN(DMA_CHn) DMA_INT|=(DMA_INT_INT0_MASK<<DMA_CHn)             //清除通道传输中断标志位
